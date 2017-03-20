@@ -1,0 +1,39 @@
+Sizes of StreamingW code and data.
+
+Empty sketch                             444 bytes
+    Sketch uses 444 bytes (1%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 9 bytes (0%) of dynamic memory, leaving 2039 bytes for local variables. Maximum is 2048 bytes.
+
+
+Added Serial and program header.        1478 bytes
+    Sketch uses 1478 bytes (4%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 188 bytes (9%) of dynamic memory, leaving 1860 bytes for local variables. Maximum is 2048 bytes.
+    
+Added StreamingW.h                      1478 bytes
+    Sketch uses 1478 bytes (4%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 188 bytes (9%) of dynamic memory, leaving 1860 bytes for local variables. Maximum is 2048 bytes.
+    
+ Added << _BYTEW                           1704 bytes   _BYTEW(0xff, 8)     added    226 bytes
+    Sketch uses 1704 bytes (5%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 196 bytes (9%) of dynamic memory, leaving 1852 bytes for local variables. Maximum is 2048 bytes.
+
+Added float declaration                     1704
+    Sketch uses 1704 bytes (5%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 196 bytes (9%) of dynamic memory, leaving 1852 bytes for local variables. Maximum is 2048 bytes.
+    
+Added println(f, 8)                         3146        println(f, 8)       added   1442 bytes
+    Sketch uses 3146 bytes (9%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 196 bytes (9%) of dynamic memory, leaving 1852 bytes for local variables. Maximum is 2048 bytes.
+
+Added << _FLOAT(f, 8)                                   _FLOAT(f, 8)        added    440 bytes
+    Sketch uses 3586 bytes (11%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 208 bytes (10%) of dynamic memory, leaving 1840 bytes for local variables. Maximum is 2048 bytes.
+
+    
+Added << _FLOATW                                        _FLOATW(f, 8)       added    108 bytes
+    Sketch uses 3694 bytes (11%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 208 bytes (10%) of dynamic memory, leaving 1840 bytes for local variables. Maximum is 2048 bytes.
+    
+Added 2nd << _FLOATW                                    2nd FLOATW(f, 8)    added    272 bytes
+    Sketch uses 3858 bytes (11%) of program storage space. Maximum is 32256 bytes.
+    Global variables use 208 bytes (10%) of dynamic memory, leaving 1840 bytes for local variables. Maximum is 2048 bytes.

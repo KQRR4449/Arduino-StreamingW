@@ -1,0 +1,37 @@
+#######################################
+# Syntax Coloring Map For StopWatch
+#######################################
+
+#######################################
+# Classes (KEYWORD1)
+#######################################
+
+StreamingW	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+_CHARW	KEYWORD2
+_SCHARW	KEYWORD2
+_UCHARW	KEYWORD2
+_BYTEW	KEYWORD2
+_INTW	KEYWORD2
+_UINTW	KEYWORD2
+_LONGW	KEYWORD2
+_ULONGW	KEYWORD2
+_PCHARW	KEYWORD2
+_PCHARFW	KEYWORD2
+_HEXW	KEYWORD2
+_DECW	KEYWORD2
+_OCTW	KEYWORD2
+_BINW	KEYWORD2
+_FLOATW	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+STREAMING_W_VER_MAJOR	LITERAL1
+STREAMING_W_VER_MINOR	LITERAL1
+_MAX_FLOAT_P	LITERAL1

@@ -1,0 +1,172 @@
+Starting test program version 1.4
+Arduino version 10800, Streaming version 5, StreamingW version 1.4
+
+sizeof() objects.
+  sizeof(void *)       2
+  sizeof(char)         1
+  sizeof(int)          2
+  sizeof(long)         4
+  sizeof(float)        4
+  sizeof(double)       4
+  sizeof Print         6
+  sizeof _TrivStr      8
+  sizeof PString      12
+  sizeof Stream       14
+  sizeof Serial      159
+
+Maximum values.
+  (signed char) CHAR_MAX                          127
+  (signed char)-CHAR_MAX                         -127
+               UCHAR_MAX                          255
+      (uint8_t)UCHAR_MAX                          255
+                 INT_MAX                        32767
+                -INT_MAX                       -32767
+                UINT_MAX                        65535
+      (uint16_t)UINT_MAX                        65535
+                LONG_MAX                   2147483647
+               -LONG_MAX                  -2147483647
+               ULONG_MAX                   4294967295
+     (uint32_t)ULONG_MAX                   4294967295
+           -_MAX_FLOAT_P -4294967040.0000000000000000
+
+Infinite value 1 divided by 0 tests.
+         (float)-1.0/0.0                          inf isinf(-1.0/0.0) true
+  (unsigned long)1UL/0UL                   4294967295
+           (long)-11L/0L                            1
+
+Width adjusted templated value tests.
+  char         'X'  width default <X>
+  char         'X'  width       12 <           X>
+  fill '.'     'X'  width       12 <...........X>
+  uchar        255  width default <255>
+  uchar        255  width       12 <         255>
+  byte         255  width default <255>
+  byte         255  width       12 <         255>
+  byte         255  width       12 <000000000255>
+  int       -32767  width default <-32767>
+  int       -32767  width       12 <      -32767>
+  uint       65535  width default <65535>
+  uint       65535  width       12 <       65535>
+  uint       65535  width       12 <000000065535>
+  long   -1L        width default <-1>
+  long   -1L        width       12 <          -1>
+  ulong  ULONG_MAX  width default <4294967295>
+  ulong  ULONG_MAX  width       12 <  4294967295>
+  ulong  ULONG_MAX  width       12 <004294967295>
+  char * <Cat>      width default <Cat>
+  char * <Cat>      width       12 <         Cat>
+  fill '.'          width       12 <.........Cat>
+  char * Empty      width default <>
+  char * Empty      width       12 <            >
+  char * NULL       width default <>
+  char * NULL       width       12 <            >
+  Fchar * <Cat>     width default <Cat>
+  Fchar * <Cat>     width       12 <         Cat>
+  fill '.'          width       12 <.........Cat>
+  Fchar * Empty     width default <>
+  Fchar * Empty     width       12 <            >
+  Fchar * NULL      width default <>
+  Fchar * NULL      width       12 <            >
+
+Width adjusted base macros tests.
+  -1L         default, width default <-1>
+  -1L             DEC, width      34 <                                -1>
+  -1L             DEC, width      34 <                                -1>
+  -1L             HEX, width      34 <                          FFFFFFFF>
+  -1L             OCT, width      34 <                       37777777777>
+  -1L             BIN, width      34 <  11111111111111111111111111111111>
+   1        with leading zeros     <0x00000001>
+   ULONG_MAX, default, width default <4294967295>
+
+Width adjusted base macros tests of chars and ints.
+   -1 int8 DEC, width      34 <                                -1>
+   -1 int8 HEX, width      34 <                                FF>
+   -1 int8 OCT, width      34 <                               377>
+   -1 int8 BIN, width      34 <                          11111111>
+ 255 uint8 DEC, width      34 <                               255>
+ 255 uint8 HEX, width      34 <                                FF>
+ 255 uint8 OCT, width      34 <                               377>
+ 255 uint8 BIN, width      34 <                          11111111>
+  -1   int DEC, width      34 <                                -1>
+  -1   int HEX, width      34 <                              FFFF>
+  -1   int OCT, width      34 <                            177777>
+  -1   int BIN, width      34 <                  1111111111111111>
+ MAX  uint DEC, width      34 <                             65535>
+ MAX  uint HEX, width      34 <                              FFFF>
+ MAX  uint OCT, width      34 <                            177777>
+ MAX  uint BIN, width      34 <                  1111111111111111>
+-MAX  long DEC, width      34 <                       -2147483648>
+-MAX  long HEX, width      34 <                          80000000>
+-MAX  long OCT, width      34 <                       20000000000>
+-MAX  long BIN, width      34 <  10000000000000000000000000000000>
+ MAX ulong DEC, width      34 <                        4294967295>
+ MAX ulong HEX, width      34 <                          FFFFFFFF>
+ MAX ulong OCT, width      34 <                       37777777777>
+ MAX ulong BIN, width      34 <  11111111111111111111111111111111>
+
+Width adjusted float tests.
+  default                      <-1.23>
+  precision        3, default  <-1.235>
+  precision        3, width 24 <                  -1.235>
+  precision       16, width 24 <     -1.2345600128173828>
+  prec. too large 17, width 24 <     -1.2345600128173828>
+  leading . chars   , width 24 <.....-1.2345600128173828>
+  width too small 10, width 12 <-1.2345600128173828>
+--------------------------------------------------------------------------------
+Starting PString versus _TrivStr tests.
+         PString test complete - test time      1556152us.
+        _TrivStr test complete - test time      1276924us.  17.943% better.
+--------------------------------------------------------------------------------
+Starting _BASEDW tests.
+         _BASEDW test complete - test time      1786916us.
+          _BYTEW test complete - test time      1758584us.   1.586% better.
+          _UINTW test complete - test time      1760508us.   1.478% better.
+         _ULONGW test complete - test time      1766168us.   1.161% better.
+--------------------------------------------------------------------------------
+Starting _CHARW and _CHARFW tests. Print width 40 characters.
+         _PCHARW test complete - test time      1953544us.
+        _PCHARFW test complete - test time      1883084us.   3.607% better.
+       << char * test complete - test time      1451768us.  25.685% better.
+          << F() test complete - test time      1337324us.  31.544% better.
+   print(char *) test complete - test time      1451760us.  25.686% better.
+      print(F()) test complete - test time      1337324us.  31.544% better.
+--------------------------------------------------------------------------------
+Starting printf() tests. Print width 75 characters.
+              << test complete - test time     13578808us.
+     printf(F()) test complete - test time     10341080us.  23.844% better.
+  printf(char *) test complete - test time     10308424us.  24.084% better.
+--------------------------------------------------------------------------------
+Starting _FLOATW tests.
+         _FLOATW test complete - test time     21797860us.
+          _FLOAT test complete - test time     20743948us.   4.835% better.
+         print() test complete - test time     20743988us.   4.835% better.
+--------------------------------------------------------------------------------
+Starting incremental test. Multiplier 1.001000
+Loops       1000, d            -2.7170
+Loops       2000, d            -7.3824
+Loops       3000, d           -20.0583
+Loops       4000, d           -54.4994
+Loops       5000, d          -148.0776
+Loops       6000, d          -402.3341
+Loops       7000, d         -1093.1618
+Loops       8000, d         -2970.1716
+Loops       9000, d         -8070.0917
+Loops      10000, d        -21926.8339
+Loops      11000, d        -59576.2851
+Loops      12000, d       -161872.0156
+Loops      13000, d       -439815.0312
+Loops      14000, d      -1194999.8750
+Loops      15000, d      -3246873.2500
+Loops      16000, d      -8821916.0000
+Loops      17000, d     -23969562.0000
+Loops      18000, d     -65126384.0000
+Loops      19000, d    -176951568.0000
+Loops      20000, d    -480786112.0000
+Loops      21000, d   -1306321920.0000
+Loops      22000, d   -3549346816.0000
+>> Overflow occurred      44054ms, Loops      22191
+Last good value     -4291679488.0000000000000000, Next value ovf
+Inverse of lastD    -0.0000000002330090
+Max printable value -4294967040.0000000000000000
+--------------------------------------------------------------------------------
+All tests have completed.
